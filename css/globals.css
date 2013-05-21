@@ -1,0 +1,111 @@
+/*******************************************
+**************global CSSski*****************
+*******************************************/
+
+/********** global style **********/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin:0;padding:0;
+border:0;outline:0;
+font-weight:inherit;
+font-style:inherit;
+font-size:100%;
+font-family:inherit;
+vertical-align:baseline;
+}
+:focus { outline:0; }
+
+/********** main body and html settings **********/
+html, body { margin:0;padding:0;border:0; }
+body { font:100%/1.25 Verdana, Arial, Helvetica, sans-serif; }
+
+
+/********** headers **********/
+h1, h2, h3, h4, h5, h6 { margin:0;padding:0;font-weight:normal; }
+h1 { letter-spacing:-1px;font-size:2em; }
+h2 { letter-spacing:-1px;font-size:1.5em; }
+h3 { font-size:1em;font-weight:bold; }
+
+/********** images **********/
+img, a img { border:0; }
+.imgLeft { float:left;margin:4px 10px 4px 0; }
+.imgRight { float:right;margin:4px 0 4px 10px; }
+
+/********** links **********/
+a:link, a:visited  { text-decoration:none; }
+a:hover, a:active { text-decoration:underline; }
+
+/********** lists **********/
+ul, ol { margin:0;padding:0 0 1.25em 2.5em;list-style: none; }
+
+/********** floats **********/
+.floatLeft {float:left;}
+.floatRight {float:right;}
+
+/********** clear **********/
+.clear { clear:both; }
+.clearer {clear:both;line-height:0;white-space:nowrap;font-size:1px;}
+.cLeft { clear:left; }
+.cRight { clear:right; }
+
+/********** aligns **********/
+.alignLeft { text-align:left; }
+.alignRight { text-align:right; }
+.alignJustify { text-align:justify; }
+.alignTop { vertical-align:top; }
+.alignMiddle { vertical-align:middle; }
+.alignBottom { vertical-align:bottom; }
+
+/********** widths **********/
+.width100 { width: 100%; }
+.width75 { width: 75%; }
+.width50 { width: 50%; }
+.width33 { width: 33%; }
+.width25 { width: 25%; }
+
+/********** margins/padding **********/
+.noP { padding:0 !important; }
+.noM { margin:0 !important; }
+.noPM { margin:0 !important;padding:0 !important; }
+.noSides {padding-left:0 !important;padding-right:0 !important; }
+.paddingLeft {padding-left:5px;}
+.paddingRight {padding-right:5px;}
+
+/********** tables *****still need cellspacing="0"***** **********/
+table { margin:0 0 1.25em 0;padding:0;}
+table tr td { padding:2px; }
+
+/********** form styles **********/
+form { margin:0;padding:0;display:inline; }
+input, select, textarea { font:11px Arial, Helvetica, sans-serif; }
+textarea { width:100%;line-height:1.25; }
+label { cursor:pointer; }
+
+input.text {
+border-top:1px solid #7c7c7c;
+border-left:1px solid #c3c3c3;
+border-right:1px solid #c3c3c3;
+border-bottom:1px solid #ddd;
+/*background:#fff url(fieldbg.gif) repeat-x top;*/
+padding:3px 2px;
+}
+
+/********** text styles **********/
+p { padding:0 0 1.25em 0; }
+blockquote { margin:1.25em;padding:1.25em 1.25em 0 1.25em; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+small { font-size:0.85em; }
+sup { position:relative;bottom:0.3em;vertical-align:baseline; }
+sub { position:relative;bottom:-0.2em;vertical-align:baseline; }
+acronym, abbr { cursor:help;letter-spacing:1px;border-bottom:1px dashed; }
+caption, th, td { text-align:left;font-weight:normal; }
+
+.bold { font-weight:bold; }
+.italic { font-style:italic; }
+.underline { border-bottom:1px solid; }
+.highlight { background:#ffc; }
+.error {color:#C00;font-weight:bold;}
+.confirmation {color:#080;font-weight:bold;}
+
+/********** misc styles **********/
+.hide { display:none; }

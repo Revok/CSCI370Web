@@ -1,0 +1,444 @@
+/****** Colorado Mines *****/
+/****** Please tell me if you like my css code, you must if you're viewing it :D *****/
+
+
+body {
+font-family:"Lucida Sans", Arial, sans-serif !important;
+background:#eef1f7 url(../images/_template/bg_body.gif) repeat-x 0 0;
+
+
+}
+#header {
+width:960px;
+margin:0 auto;padding:0 0 15px;
+}
+#header #logo {
+float:left;
+padding:25px 0 0;margin:0;
+}
+#header #logo a {
+display:block;
+margin:0;padding:0;
+width:227px;height:47px;
+background:url(../images/_template/logo.png) no-repeat 0 0;
+}
+#header #logo a:hover {text-decoration:none;}
+
+#header ul {margin:0;padding:23px 15px 0 0;float:right;}
+#header ul li {
+display:inline;
+margin:0;padding:0 3px 0 0;
+float:left;
+}
+#header ul li a {
+display:block;
+width:63px;height:63px;
+background-position:0 0;
+background-repeat:no-repeat;
+}
+	#header ul li a:hover, #header ul li .hnActive {text-decoration:none;background-position:0 -63px;}
+	#header .hHelp {background-image:url(../images/_template/h_help.png);}
+	#header .hBBoard {background-image:url(../images/_template/h_bboard.png);}
+	#header .hWebmail {background-image:url(../images/_template/h_webmail.png);}
+	#header .hTrailhead {background-image:url(../images/_template/h_trailhead.png);}
+	
+	
+#header form {margin:0;padding:23px 0 0;width:200px;float:right;}
+	#header #searchTxt {
+	display:block;
+	width:105px;height:20px;
+	margin:0 8px 0 0;padding:6px 9px 0 5px;
+	background:url(../images/_template/bg_searchTxt.gif) no-repeat 0 0;
+	border:0 none;outline:0;
+	float:left;
+	text-align:right;
+	font-size:14px;
+	}
+	#header #searchBtn {
+	float:left;
+	font-size:14px;
+	color:#272f3a;
+	background:url(../images/_template/bg_searchBtn.gif) no-repeat 0 0;
+	width:73px;height:26px;
+	border:0 none;outline:none;
+	cursor:pointer;
+	}
+	#header #searchForm a {
+	display:block;
+	width:135px;height:19px;
+	margin:11px 0 0;
+	clear:both;
+	float:right;
+	background:url(../images/_template/bg_backMines.gif) no-repeat 0 0;
+	text-decoration:none;
+	}
+	#header #searchForm a:hover {text-decoration:none;}
+
+
+#hcNav {
+background:url(../images/_template/bg_hcNav.gif) repeat-x 0 0;
+margin:0;padding:0;
+font-style:normal !important;
+}
+	#hcNav p {float:left;padding:0 0 0 2px;}
+	#hcNav p.hcnFirst {padding:0 !important;}
+	#hcnFront {background:url(../images/_template/bg_hcnFront.gif) no-repeat 0 0;padding:7px 0 20px 10px;}
+	#hcnEnd {background:url(../images/_template/bg_hcnEnd.gif) no-repeat right 0;padding:0 10px 0 0;}
+	#hcNav a {
+	color:#2b3742;
+	font-size:16px;
+	float:left;
+	padding:0 9px 0 0;
+	background-image:url(../images/_template/bg_hcNavLink02.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+	cursor:pointer;
+	}
+	#hcNav a span {
+	float:left;
+	margin:0;padding:5px 0 3px 9px;
+	background-image:url(../images/_template/bg_hcNavLink.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+	cursor:pointer;
+	}
+	#hcNav a:hover {
+	color:#fff;
+	text-decoration:none;
+	background-position:right bottom;
+	}
+	#hcNav a:hover span {background-position:left bottom;}
+
+#gHead {
+background:url(../images/_template/bg_gHead.gif) repeat-x 0 0;
+margin:10px 0 0;padding:0;
+}
+	#ghFront {background:url(../images/_template/bg_ghFront.gif) no-repeat 0 0;padding:7px 0 20px 20px;}
+	#ghEnd {background:url(../images/_template/bg_ghEnd.gif) no-repeat right 0;padding:0 16px 0 0;}
+	
+	#gHead h1 {
+	float:left;
+	margin:0;
+	padding:2px 0 0;
+	font-size:24px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase; 
+	}
+	#ghBread {
+	float:right;
+	color:#fff;
+	font-size:12px;
+	background:url(../images/_template/bg_ghBread02.gif) no-repeat right 0;
+	padding:0 13px 0 0;margin:3px 0 0;
+	}
+	#ghBread span {
+	float:left;
+	background:url(../images/_template/bg_ghBread.gif) no-repeat left 0;
+	padding:5px 0 10px 13px;
+	}
+	#ghBread a {text-decoration:underline;color:#fff;}
+
+	
+	#hcNav a {
+	color:#2b3742;
+	font-size:16px;
+	float:left;
+	padding:0 10px 0 0;
+	background-image:url(../images/_template/bg_hcNavLink02.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+	cursor:pointer;
+	}
+	#hcNav a span {
+	float:left;
+	margin:0;padding:5px 0 3px 10px;
+	background-image:url(../images/_template/bg_hcNavLink.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+	cursor:pointer;
+	}
+	#hcNav a:hover {
+	color:#fff;
+	text-decoration:none;
+	background-position:right bottom;
+	}
+	#hcNav a:hover span {background-position:left bottom;}
+	
+#container {margin:0 auto;}
+	.cFull {
+	border-top:5px solid #eaeaeb;
+	border-bottom:5px solid #eaeaeb;
+	padding:18px 20px 60px;
+	background:#fff url(../images/_template/contentLogo_white.gif) no-repeat right bottom;
+	width:920px;
+	}
+	.cTwo {width:960px;}
+	
+.chLeft {
+float:left;width:450px;
+padding:10px 0 0;
+}
+.chRight {
+float:right;width:450px;
+padding:10px 0 0;
+}
+
+.infoBox, .hcBox {
+display:block;
+width:450px;
+}
+.hcBox {padding:20px 0 0;}
+.ibImage {
+display:block;
+width:449px;height:179px;
+overflow:hidden;
+}
+.ibLinks {
+background:#efeff0 url(../images/_template/bg_ibLinks.gif) no-repeat center bottom;
+padding:20px;
+font-size:14px;
+}
+	.ibLinks a {color:#2b3742;}
+	
+.hcbHeader {
+background:url(../images/_template/bg_hcbHeader.gif) no-repeat 0 0;
+padding:8px 20px;
+}
+	.hcbHeader h1 {
+	margin:0;padding:0;
+	color:#2b3742;
+	font-size:24px;
+	
+	}
+	#hcAnnouncements .hcbHeader h1 {float:left;}
+	.hcbHeader ul {
+	float:right;
+	margin:0;padding:7px 0 0 0;
+	}
+	.hcbHeader li {
+	display:inline;
+	margin:0;padding:0;
+	font-size:10px;
+	text-transform:uppercase;
+	}
+	.hcbHeader a {
+	float:left;
+	margin:0 3px 0 0;padding:0 7px 0 0;
+	background:url(../images/_template/hcbHeaderLink.gif);
+	background-repeat:no-repeat;
+	background-position:right 0;
+	color:#2b3642;
+	}
+	.hcbHeader a span {
+	float:left;
+	background:url(../images/_template/hcbHeaderSpan.gif);
+	background-repeat:no-repeat;
+	background-position:left 0;
+	margin:0;padding:3px 0 3px 7px;
+	cursor:pointer;
+	}
+	.hcbHeader a:hover {
+	text-decoration:none;
+	background-position:right -25px;
+	}
+	.hcbHeader a:hover span {
+	text-decoration:none;
+	background-position:left -25px;
+	}
+.hcbContent {
+display:block;
+margin:0;padding:15px 20px;
+color:#2b3742;
+}
+#hcCalendar .hcbContent {float:left;width:184px;}
+	.hcbContent h2 {
+	margin:0;padding:0;
+	color:#2b3742;
+	font-size:16px;
+	}
+	.hcbContent ul {margin:0;padding:10px 0 15px;}
+	.hcbContent li {
+	display:block;
+	background:url(../images/_template/bg_li.gif) no-repeat 0 4px;
+	font-size:12px;
+	margin:0;padding:0 0 10px 15px;
+	}
+#hcbCalendar {
+float:right;
+width:224px;
+margin:0;padding:15px 0;
+color:#2b3742;
+}
+
+#gatewayBox {padding:20px 0 0;margin:0;}
+#gatewayBox table {margin:0;padding:0;}
+#gatewayBox table td, #gatewayBox table th {
+text-align:left;
+vertical-align:top !important;
+margin:0;padding:0;
+}
+
+#gatewayBox h1 {
+margin:0;padding:12px 20px 22px;
+background:url(../images/_template/bg_gatewayHeader.gif) no-repeat 0 0;
+display:block;
+font-size:18px;
+color:#2b3742;
+width:255px;
+text-align:left;
+}
+#gatewayBox .gbTbl td {
+color:#2b3742;
+padding:0 20px 25px;
+font-size:12px;
+}
+#gatewayBox .gbTbl th {text-align:center;width:310px;}
+#gatewayBox .gbTbl td a {color:#2b3742;font-size:16px;text-decoration:underline;}
+	
+
+#lCol {
+border-top:5px solid #acacb5;
+width:180px;
+padding:0 10px 10px;
+float:left;
+background:#cbcbd5 url(../images/_template/bg_lCol.gif) no-repeat 0 bottom;
+font-size:14px;
+
+}
+#lCol ul {margin:0;padding:0;}
+#lCol li {
+display:block;
+padding:2px 0;
+border-top:1px solid #bababd;
+}
+#lCol .lcFirst {border:0 none !important;}
+#lCol li a {
+display:block;
+color:#353e4b;
+padding:5px 7px 3px;
+background-repeat:no-repeat;
+background-position:0 0;
+background-image:url(../images/_template/bg_lColLink.gif);}
+#lCol li a:hover, .lcActive {text-decoration:none;background-position:0 -27px !important;}
+
+#lCol ul ul {border-top:1px solid #bababd;margin:0;padding:7px 5px 7px 6px;}
+#lCol li li {border:0 none;}
+#lCol li li a:link, #lCol li li a:visited {
+margin:0;padding:0;
+text-transform:none !important;
+font-size: .8em;
+}
+#lCol li li a:hover, #lCol li li a:active, #lCol li li .lcActive {
+background:none !important;
+text-decoration:none !important;
+color:#b03514 !important;
+}
+
+#rCol {
+width:755px;
+border-top:5px solid #eaeaeb;
+float:right;
+}
+
+#breadCrumb {
+margin:0;padding:8px 5px 8px 32px;
+background-color:#ececf2;
+font-size:12px
+;color:#353e4b;
+}
+#breadCrumb a {color:#353e4b;}
+#breadCrumb span {text-decoration:underline;}
+	
+
+	
+	
+#content {
+background-color:#fff;
+color:#2a3642;
+font-size:12px;
+padding:30px 0 0;
+}
+	.cO {}
+	.cT {background:#fff url(../images/_template/bg_crCol.gif) repeat-y right top;}
+	
+#logoBox {
+background-position:right bottom;
+background-repeat:no-repeat;
+}
+	.logoWhite {
+	padding:0 32px 60px;
+	background-image:url(../images/_template/contentLogo_white.gif);
+	}
+	.logoBlue {
+	padding:0 0 60px;
+	background-image:url(../images/_template/contentLogo_blue.gif);
+	}
+#cBox {
+width:491px;
+float:left;
+padding:0 32px 5px;
+}
+#crCol {
+width:170px;
+float:right;
+padding:0 15px 0;
+color:#edf0f6;
+}
+#crCol h1 {
+color:#edf0f6;
+font-size:14px !important;
+font-weight:bold;
+padding:0 0 15px;
+letter-spacing:normal;tt
+}
+#crCol a {color:#f8a994 !important;}
+#content h1 {
+font-size:16px;
+
+}
+#content h1.title {
+color:#353e4b;
+font-size:18px !important;
+margin:0;padding:0 0 25px;
+}
+#content h2 {
+font-size:14px;
+font-weight:bold;
+}
+#content h3 {
+font-size:12px;
+font-weight:bold;
+color:#b03514;
+}
+
+
+#content strong {font-weight:bold;}
+#content em {font-style:italic;}
+#content a {color:#b03514;text-decoration:underline;}
+#content a:hover {text-decoration:none;}
+#content ol {list-style-type:decimal;}
+#content ul {list-style-type:disc;}
+
+
+
+#footer {
+margin:0 auto;padding:8px 0 15px;
+color:#5f6f7f;
+font-size:10px;
+text-align:center;
+}
+	.fFull {
+	width:960px;
+	background:url(../images/_template/bg_footer.gif) no-repeat 0 0;
+	}
+	.fTwo {
+	width:755px;
+	border-top:5px solid #ececf2;
+	background:url(../images/_template/bg_footer02.gif) no-repeat 0 0;
+	}
+	
+#footer ul {margin:0;padding:0;text-align:center;}
+#footer li {display:inline;border-left:1px solid #5f6f7f;padding:0 3px;}
+#footer .fFirst {padding-left:0 !important;border:0 none !important;}
+#footer li a {color:#5f6f7f;text-decoration:underline;}
