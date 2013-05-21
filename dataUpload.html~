@@ -5,6 +5,7 @@
 <title>Data Upload</title>
 <link href="http://inside.mines.edu/inside/css/master.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript" src="http://mines.edu/js/jquery-1.3.2.min.js"></script>
+
 <script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/savvior.js"></script>
 <!--[if lte IE 6]>
 <link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate/css/ie6.css" media="screen" />
@@ -20,28 +21,29 @@
 <script language="javascript" src="http://inside.mines.edu/inc/inside_header.js"></script>
 <!-- /header include -->
 
+
+<!-- navigation -->
 <!-- page container -->
 <div id="container" class="cTwo">
-  
-  <!-- navigation -->
   <div id="lCol">
-    <ul>
-	  <li class="lcFirst"><a href="section.html">HyPerMaps Overview</a></li>
-	  <!-- note active flag -->
-	  <li><a class="lcActive" href="page.html">Data Upload</a>
-	    <ul>
-	       <li><a href="page_sidebar.html">Retrieve Simulation Results</a></li>
-	    </ul>
-	  </li>
-    </ul>
-  </div>
+    <span Id="zwrapper">
+      <ul class="testers">
+	<li class="lcFirst">
+	  <a  class=" lcActive" href="hyPerMapsOverview.html">HyPerMaps</a>
+	  <ul>
+	    <li><a  href="dataUpload.html">Data Upload</a></li>
+	    <li><a  href="retrieveResults.html">Retrieve Results</a></li>
+	  </ul>
+	</span>
+      </div>
+<!-- /page container -->
   <!-- /navigation -->
 
 <!-- main content well -->
 <div id="rCol">
 
   <!-- breadcrumbs -->
-  <div id="breadCrumb"><a href="/">Home</a> &raquo;  <a href="page.html">Data Upload</a> &raquo;</div>
+  <div id="breadCrumb"><a href="/">Home</a> &raquo;  <a href="dataUpload.html">Data Upload</a> &raquo;</div>
   <!-- /breadcrumbs -->
   
   <!-- content -->
@@ -49,12 +51,16 @@
 
   <div id="logoBox" class="logoWhite">
     <h1 class="title">Data Upload</h1>
-    <form action="submit.php" method="post" enctype="multipart/form-data">
-      <label for="file">Filename:</label>
-      <input type="file" name="file" id="file"/><br/>
-      <input type="submit" name="submit" value="Submit"/>
+    <form>
+      <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayUploadConfigFile('formDisplay')">Upload Configuration File</input>
+      <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayBuildConfigFile('formDisplay')">Build Configuration File</input>
     </form>
+    <form action='upload>
+    <script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>
     </p>
+    <p id="formDisplay">
+    </p>
+
   </div>
   </div>
   <!-- footer include -->
@@ -65,7 +71,7 @@
 	
   </div>
 
-  <!~-- clearing element DO NOT DELETE -->
+  <!-- clearing element DO NOT DELETE -->
   <div class="clearer">&nbsp;</div>
 
 </div>

@@ -20,21 +20,18 @@
 <script language="javascript" src="http://inside.mines.edu/inc/inside_header.js"></script>
 <!-- /header include -->
 
-<!-- navigation -->
 <!-- page container -->
 <div id="container" class="cTwo">
+  
+  <!-- navigation -->
   <div id="lCol">
-    <span Id="zwrapper">
-      <ul class="testers">
-	<li class="lcFirst">
-	  <a  class=" lcActive" href="hyPerMapsOverview.html">HyPerMaps</a>
-	  <ul>
-	    <li><a  href="dataUpload.html">Data Upload</a></li>
-	    <li><a  href="retrieveResults.html">Retrieve Results</a></li>
-	  </ul>
-	</span>
-      </div>
-<!-- /page container -->
+    <ul>
+      <!-- note active flag -->
+	  <li class="lcFirst"><a class="lcActive" href="section.html">HyPerMaps Overview</a></li>
+	  <li><a href="dataUpload.html">Data Upload</a></li>
+	  <li><a href="retrieveResults.html">Retrieve Results</a></li>
+    </ul>
+  </div>
   <!-- /navigation -->
 
 <!-- main content well -->
