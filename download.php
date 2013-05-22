@@ -1,6 +1,5 @@
 <?php
-$file = 'test.txt';
-
+$file = $_POST['projectName'] . ".txt";
 if (file_exists($file)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
@@ -16,4 +15,3 @@ if (file_exists($file)) {
     exit;
 }
 ?>
-
