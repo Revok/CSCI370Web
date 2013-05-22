@@ -14,4 +14,8 @@ if (file_exists($file)) {
     readfile($file);
     exit;
 }
+else
+{
+	header('Location: invalidDownload.html');
+}
 ?>
