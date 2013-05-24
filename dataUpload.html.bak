@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript" src="http://mines.edu/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+      // Document is ready
+      $("#content[align=right]").removeAttr("align").addClass("imgRight");
+      $("#content[align=left]").removeAttr("align").addClass("imgLeft");
+      });
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Data Upload</title>
+    <link href="css/master.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/print.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate/css/ie6.css" media="screen" />
+	<script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/jqPngFix.js"></script>
+	<![endif]-->
+    <!--<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate//css/safari.css" media="screen" />-->
+    <link rel="stylesheet" type="text/css" href="css/safari.css" media="screen"/>
+  </head>
+
+  <body class="level">
+    <div id="containa">
+      <div id="header" class="levelH">
+	<!-- Lead Art -->
+	<!-- modify the background-image:url path below to change the lead art -->
+	<!--			<div id="landingIMG" style="background-image:url(images/index_banner.jpg);">
+				<!-- /Lead Art -->
+				
+				<!-- Mines Logo -->
+				<a href="index.html" class="logo"><img src="images/logo.jpg" alt="Colorado Mines" /></a>
+				<!-- /Mines Logo -->
+				
+				<!-- search form & links -->
+				<script language="javascript" src="http://inside.mines.edu/inc/search_include.js"></script>
+				<!-- /search form & links -->
+	</div>
+      </div>      
+      <!-- Clearing Element (DO NOT DELETE) -->
+      <div class="clearer">&nbsp;</div>
+      <div class="clearer">&nbsp;</div>
+      </div>
+      <div id="containa">
+	<div id="contentor">
+	  <div id="lCol" class="floatLeft">
+	    <ul>
+	      <li class="lcF"><a class="activeMenu" href="hyPerMapsOverview.html">HyPerMaps</a>
+		<ul>
+		  <li><a  href="dataUpload.html">Data Upload</a></li>
+		  <li><a  href="retrieveResults.html">Retrieve Results</a></li>
+	      </ul></li>
+	      <li><a href="faculty.html">Faculty</a></li>
+	      <li><a href="about_us.html">About Us</a></li>
+	      <li><a href="contact_us.html">Contact Us</a></li>
+	    </ul>
+	    <ul>
+	    </ul>
+	    <div id="lcFooter"><a href="">Navigation Highlight</a></div>
+	  </div>
+
+	  <!-- main content well -->
+	  <div id="rCol" class="floatLeft">
+	    <!-- breadcrumbs -->
+	    <div id="breadCrumb"><a href="index.html">Home</a> &raquo;  <a href="dataUpload.html">Data Upload</a> &raquo;</div>
+	    <!-- /breadcrumbs -->
+	    
+	    <!-- content -->
+	    <div id="content" class="c0">
+	      <div id="logoBox" class="logoWhite">
+		<h1 class="title">Data Upload</h1>
+		<form>
+		  <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayUploadConfigFile('formDisplay')">Upload Configuration File</input><script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>t>
+	<input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayBuildConfigFile('formDisplay')">Build Configuration File</input>
+      </form>
+      <form action='upload'>
+    <script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>
+    </p>
+    <p id="formDisplay">
+    </p>
+
+    </div>
+  </div>
+	  <!-- Footer -->
+	  <div id="cFooter">
+      <p>&copy; 2008 Your Site<span> | <a href="http://mines.edu/PrivacyPolicy">Mines Privacy Policy</a> | <a href="site_map.html">Site Map</a></span></p>
+	  </div>
+	  <!-- /Footer -->
+	  
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

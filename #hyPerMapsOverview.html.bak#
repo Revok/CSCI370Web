@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HyPerMaps Overview</title>
+<link href="http://inside.mines.edu/inside/css/master.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="http://mines.edu/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/savvior.js"></script>
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate/css/ie6.css" media="screen" />
+<script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/jqPngFix.js"></script>
+<![endif]-->
+<!--<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate//css/safari.css" media="screen" />-->
+
+</head>
+
+<body>
+
+<!-- header include -->
+<script language="javascript" src="http://inside.mines.edu/inc/inside_header.js"></script>
+<!-- /header include -->
+<!-- navigation -->
+<!-- page container -->
+<div id="container" class="cTwo">
+  <div id="lCol">
+    <span Id="zwrapper">
+     <ul class="testers">
+	<li class="lcFirst">
+	  <a  class=" lcActive" href="hyPerMapsOverview.html">HyPerMaps</a>
+	  <ul>
+	    <li><a  href="dataUpload.html">Data Upload</a></li>
+	    <li><a  href="retrieveResults.html">Retrieve Results</a></li>
+	  </ul>
+	</span>
+      </div>
+<!-- /page container -->
+  <!-- /navigation -->
+
+<!-- main content well -->
+<div id="rCol">
+
+<!-- section image -->
+<img src="images/section_banner.jpg" alt="test" />
+<!-- /section image -->
+
+  <!-- breadcrumbs -->
+  <div id="breadCrumb"><a href="/">Home</a> &raquo;  <a href="hyPerMapsOverview.html">HyPerMaps Overview</a></div>
+  <!-- /breadcrumbs -->
+		
+  <!-- footer include -->
+  <div id="footer" class="fTwo">
+  <script language="javascript" src="http://inside.mines.edu/inc/inside_footer.js"></script>
+  </div>
+  <!-- /footer include -->
+	
+  </div>
+
+  <!~-- clearing element DO NOT DELETE -->
+  <div class="clearer">&nbsp;</div>
+
+</div>
+<!-- /page container -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6649400-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+<!-- Begin Search Box Javascript.  Don't move to head section --->
+<script language="JavaScript1.1">
+// This function selects and loads the appropriate CGI based on which "cgi"
+// radiobox item was selected.
+ie4 = (document.all) ? true : false;
+ns4 = (document.layers) ? true : false;
+function focusCGI (element)
+{
+    selector = (ns4) ? document.layers["bgLayer"].document.forms.CGISelector : document.forms.CGISelector
+    if (selector.cgi[0].checked == true) {
+        selector.cgi[0].checked = true;
+        selector.cgi[1].checked = false;
+	selector.qt.name = "qt";
+        selector.action = "http://www.is.mines.edu/dirsearch/dirsearch.asp";
+	    selector.target = "self";
+    }
+    else {
+        selector.cgi[1].checked = true;
+        selector.cgi[0].checked = false;
+//        selector.action = "http://quidditch.mines.edu:8765/query.html";
+	selector.qt.name = "q";
+        selector.action = "http://sponge.mines.edu/search";
+		selector.target = "self";
+    }
+}
+// This function selects and loads the appropriate CGI based on which "cgi"
+// radiobox item was selected.
+function selectCGI (element)
+{
+    selector = (ns4) ? document.layers["bgLayer"].document.forms.CGISelector : document.forms.CGISelector
+    if (element.name == "cgi") {
+        if (element.value == "web") {
+//            selector.action = "http://quidditch.mines.edu:8765/query.html";
+	    selector.qt.name = "q";
+            selector.action = "http://sponge.mines.edu/search";
+        }
+        else if (element.value == "person") {
+	    selector.qt.name = "qt";
+            selector.action = "http://www.is.mines.edu/dirsearch/dirsearch.asp";
+        }
+    }
+//    if (element.name == "NAME") {
+//        selector.qt.pvalue = selector.NAME.value;
+//    }
+}
+// This function adds event handlers to every element in a form.
+// It doesn't check to see if the element supports the event handler,
+// it just adds them all.
+function addhandlers (f)
+{
+    var click_handler  = new Function ("selectCGI (this)");
+    var change_handler = new Function ("selectCGI (this)");
+    var focus_handler  = new Function ("focusCGI (this)");
+//    var submit_handler = new Function ("focusCGI (this)");
+    for(var i = 0; i < f.elements.length; i++) {
+        var e = f.elements[i];
+        e.onclick  = click_handler;
+        e.onchange = change_handler;
+        e.onfocus  = focus_handler;
+//        e.onsubmit = submit_handler;
+    }
+}
+// Force state when browsers "Back" button hit.
+// Do not try opposite checked states; for some reason it does not work (under IE 6.0 anyway).
+if (ns4) {
+ document.layers["bgLayer"].document.forms.CGISelector.cgi[1].checked = true;
+ document.layers["bgLayer"].document.forms.CGISelector.cgi[0].checked = false;
+// document.layers["bgLayer"].document.forms.CGISelector.action = "http://quidditch.mines.edu:8765/query.html";
+ document.layers["bgLayer"].document.forms.CGISelector.qt.name = "q";
+ document.layers["bgLayer"].document.forms.CGISelector.action = "http://sponge.mines.edu/search";
+ addhandlers(document.layers["bgLayer"].document.CGISelector);
+}
+else {
+ document.forms.CGISelector.cgi[1].checked = true;
+ document.forms.CGISelector.cgi[0].checked = false;
+// document.forms.CGISelector.action = "http://quidditch.mines.edu:8765/query.html";
+ document.forms.CGISelector.qt.name = "q";
+ document.forms.CGISelector.action = "http://sponge.mines.edu/search";
+ addhandlers(document.CGISelector);
+}
+////document.forms.CGISelector.qt.value = document.forms.CGISelector.NAME.value;
+// Activate our form by adding all possible event handlers!
+//addhandlers(document.CGISelector);
+</script>
+<!-- End Search Box JavaScript --->
+
+</body>
+</html>

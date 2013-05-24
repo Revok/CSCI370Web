@@ -1,0 +1,22 @@
+Use of the Colorado School of Mines Academic Department template files constitutes agreement to the following terms:
+
+* You may use these templates on any academic department hosted under the mines.edu domain.
+
+* You MAY NOT use these templates for non-academic departments, or for sites hosted outside the mines.edu domain.
+
+* You may modify these templates as you see fit, with the following exceptions:
+
+	* You MAY NOT modify the logo.gif file in any way. After you have downloaded the academic department templates, you must send an email to fstewart@mines.edu requesting a custom logo image for your department. The name of your department, the Mines mark, and the Colorado School of Mines subscript on the customized logo.gif image must remain intact and unaltered.
+	* You MAY NOT eliminate any of the following navigation elements or their corresponding pages: faculty, about us, contact us, undergraduate program, and graduate program. These pages must be present in the left navigation bar, and populated with relevant content. Templates for these pages may be changed as needed.
+	* You MAY NOT remove the search form from any template, and you MAY NOT change the location of this element.
+
+* Modified or unmodified, you MAY NOT redistribute these templates.
+
+* Modified or unmodified, you MAY NOT claim intellectual and / or exclusive ownership of these templates.
+
+Colorado School of Mines Academic Department Web Templates are provided "as is" without warranty of any kind, either expressed or implied.
+
+Questions regarding this user agreement may be directed to Marsha Williams (Marsha.Williams@is.mines.edu) at (303) 273-3326.
+
+-----------------------------
+fstewart@mines.edu - 01/20/09

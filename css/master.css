@@ -5,13 +5,4 @@
 @import "globals.css";
 
 /* ~~~~~ main ~~~~~ */
-@import "colo-mines.css";
-
-/* ~~~~~ headers ~~~~~ */
-/*@import "sIFR.css";*/
-
-/* ~~~~~ menu ~~~~~ */
-/*@import "menu.css";*/
-
-/* ~~~~~ news ~~~~~ */
-@import "savvi_news.css";
+@import "mines.css";

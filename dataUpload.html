@@ -1,177 +1,144 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Data Upload</title>
-<link href="http://inside.mines.edu/inside/css/master.css" rel="stylesheet" type="text/css" media="screen" />
-<script type="text/javascript" src="http://mines.edu/js/jquery-1.3.2.min.js"></script>
 
-<script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/savvior.js"></script>
-<!--[if lte IE 6]>
-<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate/css/ie6.css" media="screen" />
-<script type="text/javascript" src="http://inside.mines.edu/inc/insideTemplate/js/jqPngFix.js"></script>
+<head>
+
+<script type="text/javascript" src="http://mines.edu/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // Document is ready
+  $("#content[align=right]").removeAttr("align").addClass("imgRight");
+  $("#content[align=left]").removeAttr("align").addClass("imgLeft");
+});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HyPerMaps Overview</title>
+
+<!-- Common Styles -->
+<link href="css/master.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+<!-- /Common Styles -->
+
+<!-- Browser-Specific Styles -->
+<!--[if gte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
 <![endif]-->
-<!--<link rel="stylesheet" type="text/css" href="http://inside.mines.edu/inc/insideTemplate//css/safari.css" media="screen" />-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/safari.css" media="screen" />
+<!-- /Browser-Specific Styles -->
 
 </head>
 
-<body>
+<body class="level">
+	
+	<div id="containa">
+	  <div id="header" class="levelH">
+			<!-- Lead Art -->
+			<!-- modify the background-image:url path below to change the lead art -->
+<!--			<div id="landingIMG" style="background-image:url(images/index_banner.jpg);">
+			<!-- /Lead Art -->
+			
+			<!-- Mines Logo -->
+			<a href="index.html" class="logo"><img src="images/logo.jpg" alt="Colorado Mines" /></a>
+					<!-- /Mines Logo -->
+					
+					<!-- search form & links -->
+					<script language="javascript" src="http://inside.mines.edu/inc/search_include.js"></script>
+					<!-- /search form & links -->
+					
+				</div>
+		
+		<!-- Clearing Element (DO NOT DELETE) -->
+		<div class="clearer">&nbsp;</div>
+		</div>
+		<!-- /Tab Menu -->
+		
+		<!-- Clearing Element (DO NOT DELETE) -->
+		<div class="clearer">&nbsp;</div>
+		</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="containa">
+	
 
-<!-- header include -->
-<script language="javascript" src="http://inside.mines.edu/inc/inside_header.js"></script>
-<!-- /header include -->
+<div id="contentor">
 
-<!-- navigation -->
-<!-- page container -->
-<div id="container" class="cTwo">
-  <div id="lCol">
-    <span Id="zwrapper">
-      <ul class="testers">
-	<li class="lcFirst">
-	  <a  class=" lcActive" href="hyPerMapsOverview.html">HyPerMaps</a>
+    <!-- Main Navigation -->
+	<div id="lCol" class="floatLeft">
 	  <ul>
-	    <li><a  href="dataUpload.html">Data Upload</a></li>
-	    <li><a  href="retrieveResults.html">Retrieve Results</a></li>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="news.html">News</a></li>
+	    <li><a href="researchFocus.html">Research Focus</a></li>
+	    <li><a href="facultyAndStudents.html">Faculty & Students</a></li>
+	    <li><a href="projects.html">Projects</a></li>
+	    <li><a href="publications.html">Publications</a></li>
+	    <li><a href="relatedCourses.html">Related Courses</a></li>
+	    <li><a href="facilities.html">Facilities</a></li>
+	    <li><a href="hyPerMapsOverview.html">HyPerMaps</a>
+	      <ul>
+		<li><a class="activeMenu" href="dataUpload.html">Create a new Model</a></li>
+		<li><a href="retrieveResults.html">Retrieve model Results</a></li>
+	      </ul>
+	    </li>
+	  <li><a href="internalSite.html">Internal Site (Current Students Only)</a></li>
 	  </ul>
-	</span>
-      </div>
-<!-- /page container -->
-  <!-- /navigation -->
 
-<!-- main content well -->
-<div id="rCol">
+	  
+	  <!-- Bottom Navigation Item (Highlight) -->
+	  <div id="lcFooter"><a href="">Navigation Highlight</a></div>
+	  <!-- /Bottom Navigation Item (Highlight) -->
+	
+	</div>
+	<!-- /Main Navigation -->
 
-  <!-- breadcrumbs -->
-  <div id="breadCrumb"><a href="/">Home</a> &raquo;  <a href="dataUpload.html">Data Upload</a> &raquo;</div>
-  <!-- /breadcrumbs -->
+    <!-- Main Content Well -->
+	<div id="rCol" class="floatLeft">
+	
+	  <!-- Breadcrumbs -->
+
+	  <div id='breadCrumb'>
+	    <a href="index.html">Home</a> &raquo <a href="hyPerMapsOverview.html">HyPerMapsOverview</a>&raquo;
+	  </div>
+	  <!-- /Breadcrumbs -->
+	  
+  
+	  
   
   <!-- content -->
   <div id="content" class="cO">
-  <div id="logoBox" class="logoWhite">
-    <h1 class="title">Data Upload</h1>
-    <form>
-      <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayUploadConfigFile('formDisplay')">Upload Configuration File</input><script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>t>
-      <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayBuildConfigFile('formDisplay')">Build Configuration File</input>
-    </form>
-    <form action='upload'>
-    <script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>
-    </p>
-    <p id="formDisplay">
-    </p>
+
+    <div id="logoBox" class="logoWhite">
+		<h1 class="title">Data Upload</h1>
+		<form>
+		  <input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayUploadConfigFile('formDisplay')">Upload Configuration File</input><script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>
+<input type="radio" name="BuildOrUploadConfigFile" id="BuildOrUploadConfigFileRadio" onclick="displayBuildConfigFile('formDisplay')">Build Configuration File</input>
+	  </form>
+	  <script language="JavaScript" type="text/javascript" src="formDisplay.js"></script>
+	</p>
+	<p id="formDisplay">
+	</p>
+
+
+    </div>
 
   </div>
-  </div>
-  <!-- footer include -->
-  <div id="footer" class="fTwo">
-  <script language="javascript" src="http://inside.mines.edu/inc/inside_footer.js"></script>
-  </div>
-  <!-- /footer include -->
-	
-  </div>
+  <!-- /content -->
 
-  <!-- clearing element DO NOT DELETE -->
-  <div class="clearer">&nbsp;</div>
 
+	  <!-- Footer -->
+	  <div id="cFooter">
+      <p>&copy; 2008 Your Site<span> | <a href="http://mines.edu/PrivacyPolicy">Mines Privacy Policy</a> | <a href="site_map.html">Site Map</a></span></p>
+	  </div>
+	  <!-- /Footer -->
+	  
+		</div>
+	</div>
 </div>
-<!-- /page container -->
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-</form>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-6649400-3");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-
-<!-- Begin Search Box Javascript.  Don't move to head section --->
-<script language="JavaScript1.1">
-// This function selects and loads the appropriate CGI based on which "cgi"
-// radiobox item was selected.
-ie4 = (document.all) ? true : false;
-ns4 = (document.layers) ? true : false;
-function focusCGI (element)
-{
-    selector = (ns4) ? document.layers["bgLayer"].document.forms.CGISelector : document.forms.CGISelector
-    if (selector.cgi[0].checked == true) {
-        selector.cgi[0].checked = true;
-        selector.cgi[1].checked = false;
-	selector.qt.name = "qt";
-        selector.action = "http://www.is.mines.edu/dirsearch/dirsearch.asp";
-	    selector.target = "self";
-    }
-    else {
-        selector.cgi[1].checked = true;
-        selector.cgi[0].checked = false;
-//        selector.action = "http://quidditch.mines.edu:8765/query.html";
-	selector.qt.name = "q";
-        selector.action = "http://sponge.mines.edu/search";
-		selector.target = "self";
-    }
-}
-// This function selects and loads the appropriate CGI based on which "cgi"
-// radiobox item was selected.
-function selectCGI (element)
-{
-    selector = (ns4) ? document.layers["bgLayer"].document.forms.CGISelector : document.forms.CGISelector
-    if (element.name == "cgi") {
-        if (element.value == "web") {
-//            selector.action = "http://quidditch.mines.edu:8765/query.html";
-	    selector.qt.name = "q";
-            selector.action = "http://sponge.mines.edu/search";
-        }
-        else if (element.value == "person") {
-	    selector.qt.name = "qt";
-            selector.action = "http://www.is.mines.edu/dirsearch/dirsearch.asp";
-        }
-    }
-//    if (element.name == "NAME") {
-//        selector.qt.pvalue = selector.NAME.value;
-//    }
-}
-// This function adds event handlers to every element in a form.
-// It doesn't check to see if the element supports the event handler,
-// it just adds them all.
-function addhandlers (f)
-{
-    var click_handler  = new Function ("selectCGI (this)");
-    var change_handler = new Function ("selectCGI (this)");
-    var focus_handler  = new Function ("focusCGI (this)");
-//    var submit_handler = new Function ("focusCGI (this)");
-    for(var i = 0; i < f.elements.length; i++) {
-        var e = f.elements[i];
-        e.onclick  = click_handler;
-        e.onchange = change_handler;
-        e.onfocus  = focus_handler;
-//        e.onsubmit = submit_handler;
-    }
-}
-// Force state when browsers "Back" button hit.
-// Do not try opposite checked states; for some reason it does not work (under IE 6.0 anyway).
-if (ns4) {
- document.layers["bgLayer"].document.forms.CGISelector.cgi[1].checked = true;
- document.layers["bgLayer"].document.forms.CGISelector.cgi[0].checked = false;
-// document.layers["bgLayer"].document.forms.CGISelector.action = "http://quidditch.mines.edu:8765/query.html";
- document.layers["bgLayer"].document.forms.CGISelector.qt.name = "q";
- document.layers["bgLayer"].document.forms.CGISelector.action = "http://sponge.mines.edu/search";
- addhandlers(document.layers["bgLayer"].document.CGISelector);
-}
-else {
- document.forms.CGISelector.cgi[1].checked = true;
- document.forms.CGISelector.cgi[0].checked = false;
-// document.forms.CGISelector.action = "http://quidditch.mines.edu:8765/query.html";
- document.forms.CGISelector.qt.name = "q";
- document.forms.CGISelector.action = "http://sponge.mines.edu/search";
- addhandlers(document.CGISelector);
-}
-////document.forms.CGISelector.qt.value = document.forms.CGISelector.NAME.value;
-// Activate our form by adding all possible event handlers!
-//addhandlers(document.CGISelector);
-</script>
-<!-- End Search Box JavaScript --->
 
 </body>
 </html>
