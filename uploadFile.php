@@ -20,7 +20,7 @@
         return true;
    }
    function writeConfigFile($email, $jobName, $integerVars, $nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient, $storeIterativeResults, $typeOfModel) {
-        if(isANonInteger(array($integerVars, $nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient))) { 
+        if(isANonInteger(array($nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient)) || isANonInteger($integerVars)) { 
             echo "Error: All variables but the email, job name, and type of model  must be integers.<br/>";  
             return false;
         }
