@@ -4,7 +4,7 @@ var formEnding    = "<label type='file'>Data Filename: </label>\
 </form>";
 
 function displayUploadConfigFile(paragraphID) {
-    var uploadConfigFileForm = "<form action='uploadFile.php?uploadedFile=true' method='post' enctype='multipart/form-data'>\
+    var uploadConfigFileForm = "<form action='uploadJob.php?uploadedFile=true' method='post' enctype='multipart/form-data'>\
                                E-mail:             <br/><input type='text' name='email' id='email'></input><br/><br/>\
                                Job Name:           <br/><input type='text' name='jobName' id='jobName'></input><br/><br/>\
                                <label type='file'>Configuration Filename:</label>\
@@ -15,7 +15,7 @@ function displayUploadConfigFile(paragraphID) {
     
 }
 function displayBuildConfigFile(paragraphID) {
-    var downloadConfigFileForm = "<form action='uploadFile.php?uploadedFile=false' method='post' enctype='multipart/form-data'>\
+    var downloadConfigFileForm = "<form action='uploadJob.php?uploadedFile=false' method='post' enctype='multipart/form-data'>\
                                    E-mail:                                       <br/><input type='text' name='email' id='email'></input><br/><br/>\
                                    Job Name:                                     <br/><input type='text' name='jobName' id='jobName'></input><br/><br/>\
                                    Number of Design Variables (nDv):             <br/><input type='text' name='nDv' id='nDv'></input><br/><br/>\

@@ -1,10 +1,11 @@
 <html>
 <body>
 <?php
-   define("DATA_FILE_NAME", "DataFile");
-   define("CONFIG_FILE_NAME", "ConfigFile");
    include 'utilityFunctions.php';
-   
+
+   define("DATA_FILE_NAME", "DataFile");
+   define("CONFIG_FILE_NAME", "ConfigFile");   
+
    function verifyConfigFile($filename) {
         $configFile = fopen($filename, "r");
    }
@@ -19,9 +20,9 @@
         fclose($jobFile);
         return true;
    }
-   function writeConfigFile($email, $jobName, $integerVars, $nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient, $storeIterativeResults, $typeOfModel) {
+   function writeConfigFile($email, $jobName, $integerVars, $nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient) {
         if(isANonInteger(array($nDv, $nCp, $nPi, $RMSErrorTolerance, $maxRMSErrorTolerance, $correlationCoefficient)) || isANonInteger($integerVars)) { 
-            echo "Error: All variables but the email, job name, and type of model  must be integers.<br/>";  
+            echo "Error: All variables but the email and job name  must be integers.<br/>";  
             return false;
         }
         $configFile = fopen(configNameFromMailAndJob($email, $jobName), "w");
@@ -35,8 +36,8 @@
         fwrite($configFile, $RMSErrorTolerance."\n");
         fwrite($configFile, $maxRMSErrorTolerance."\n");
         fwrite($configFile, $correlationCoefficient."\n");
-        fwrite($configFile, "Integer Variables");
-        foreach($integerVarNum as $integerVars) {
+        fwrite($configFile, "Integer Variables\n");
+        foreach($integerVars as $integerVarNum) {
            fwrite($configFile, $integerVarNum."\n");
         }
         fclose($configFile);
@@ -57,7 +58,7 @@
    }
    
    function writeQueue($filename){
-   	$pathway = '/opt/lampp/htdocs/CSCI370Web/queue/';
+   	$pathway = 'queue/';
    	$queueFile = fopen($pathway . $filename, "wa");
    	if (!$queueFile){
    		return false;
@@ -84,8 +85,7 @@
      if(!file_exists(jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
         if(writeConfigFile($_POST['email'], $_POST['jobName'], $_POST['integerVars'], 
                            $_POST['nDv'], $_POST['nCp'], $_POST['nPi'], $_POST['RMSErrorTolerance'], 
-                           $_POST['maxRMSErrorTolerance'], $_POST['correlationCoefficient'], 
-                           $_POST['storeIterativeResults'], $_POST['typeOfModel'])
+                           $_POST['maxRMSErrorTolerance'], $_POST['correlationCoefficient'])
            && writeJobFile($_POST['email'], $_POST['jobName'])
            && ($_FILES[DATA_FILE_NAME]["error"] == 0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
@@ -105,3 +105,4 @@
    ?>
 </body>
 </html>
+
