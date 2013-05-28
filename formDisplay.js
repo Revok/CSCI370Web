@@ -24,8 +24,8 @@ function displayBuildConfigFile(paragraphID) {
                                    <div id='integerVariables' name='integerVariables'>\
                                    <b> Integer Variables</b><br/>\
                                    </div>\
-                                   <input type='button' value='Add another Integer Variable' onClick=\"addAnotherIntegerVariable('integerVariables')\"></input>\
-                                   <input type='button' style='visibility:hidden' value='Remove an Integer Variable' onClick=\"removeIntegerVariable('integerVariables')\"></input><br/>\
+                                   <input type='button' value='Add another Integer Variable' onClick=\"addAnotherIntegerVariable('integerVariables', 'removeInt')\"></input>\
+                                   <input type='button' style='visibility:hidden' name='removeInt' id='removeInt' value='Remove an Integer Variable' onClick=\"removeIntegerVariable('integerVariables', 'removeInt')\"></input><br/>\
                                    RMS Error Tolerance for data point matching:  <br/><input type='text' name='RMSErrorTolerance' id='RMSErrorTolerance'></input><br/><br/>\
                                    Maximum RMS Error Tolerance for data point matching: <br/><input type='text' name='maxRMSErrorTolerance' id='maxRMSErrorTolerance'></input><br/><br/>\
                                    Correlation Coefficient Convergence Tolerance:<br/><input type='text' name='correlationCoefficient' id='correlationCoefficient'></input><br/><br/>\
@@ -33,14 +33,19 @@ function displayBuildConfigFile(paragraphID) {
     document.getElementById(paragraphID).innerHTML = downloadConfigFileForm;
 }
 var counter=0;
-function addAnotherIntegerVariable(divId) {
+function addAnotherIntegerVariable(divId, removeInputId) {
+    if(counter == 0) {
+	document.getElementById(removeInputId).style.visibility="visible";
+    }
+
     counter++;
     var newDiv = document.createElement('div');
     newDiv.innerHTML = "Integer Var "+counter +"<br/><input type='text' name='integerVars[]' id='integerVars[]'></input><br/>";
     document.getElementById(divId).appendChild(newDiv);
 }
-function removeIntegerVariable(divId) {
+function removeIntegerVariable(divId, removeInputId) {
     if(counter <= 0) return;
     counter--;
     document.getElementById(divId).removeChild(document.getElementById(divId).lastChild);
+    if(counter == 0) document.getElementById(removeInputId).style.visibility="hidden";
 }
