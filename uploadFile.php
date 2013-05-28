@@ -1,7 +1,13 @@
 <html>
 <body>
 <?php
+   define("DATA_FILE_NAME", "DataFile");
+   define("CONFIG_FILE_NAME", "ConfigFile");
    include 'utilityFunctions.php';
+   
+   function verifyConfigFile($filename) {
+        $configFile = fopen($filename, "r");
+   }
    function writeJobFile($email, $jobName) {
         $jobFile = fopen(jobNameFromMailAndJob($email, $jobName), "w");
         if(!$jobFile) {
@@ -26,29 +32,29 @@
         fwrite($configFile, $nDv."\n");
         fwrite($configFile, $nCp."\n");  
         fwrite($configFile, $nPi."\n");
-        fwrite($configFile, $integerVars."\n");
         fwrite($configFile, $RMSErrorTolerance."\n");
         fwrite($configFile, $maxRMSErrorTolerance."\n");
         fwrite($configFile, $correlationCoefficient."\n");
-        fwrite($configFile, $storeIterativeResults."\n");
-        fwrite($configFile, $typeOfModel."\n");
-                
+        fwrite($configFile, "Integer Variables");
+        foreach($integerVarNum as $integerVars) {
+           fwrite($configFile, $integerVarNum."\n");
+        }
         fclose($configFile);
         return true;
      
    }
-   writeUploadedDataFile("DataFile");
+   writeUploadedDataFile(DATA_FILE_NAME);
    //if we uploaded a configuration file, 
    if($_GET['uploadedFile'] == 'true') {
-        echo writeUploadedDataFile("ConfigFile");
+        echo writeUploadedDataFile(CONFIG_FILE_NAME);
         if(writeJobFile($_POST['email'], $_POST['jobName'])
-           && ($_FILES["DataFile"]["error"]==0)
+           && ($_FILES[DATA_FILE_NAME]["error"]==0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
-                         $_FILES["DataFile"]["name"], $_FILES["ConfigFile"]["name"]), 
+                         $_FILES[DATA_FILE_NAME]["name"], $_FILES[CONFIG_FILE_NAME]["name"]), 
                          jobZipnameFromMailAndJob($_POST["email"], $_POST["jobName"])) ) {
             echo "Thank you for your submission Your data has been successfully submitted.";
           } else {
-            echo "There was an error in your submission. Please try again.";
+            echo "There was an error in your submission. One of the files you uploaded is probably invalid. Please try again.";
          }
    } else { //otherwise, build the configuration file
      if(!file_exists(jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
@@ -57,9 +63,9 @@
                            $_POST['maxRMSErrorTolerance'], $_POST['correlationCoefficient'], 
                            $_POST['storeIterativeResults'], $_POST['typeOfModel'])
            && writeJobFile($_POST['email'], $_POST['jobName'])
-           && ($_FILES["DataFile"]["error"] == 0)
+           && ($_FILES[DATA_FILE_NAME]["error"] == 0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
-                         $_FILES['DataFile']['name'], configNameFromMailAndJob($_POST['email'], $_POST['jobName'])),
+                         $_FILES[DATA_FILE_NAME]['name'], configNameFromMailAndJob($_POST['email'], $_POST['jobName'])),
                          jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
            echo "Thank you for your submission. Your data has been successfuly submitted.";
          } else {

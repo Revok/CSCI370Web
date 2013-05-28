@@ -1,5 +1,6 @@
 <?php
    define("JOB_DIRECTORY", "jobs/");
+   define("FINISHED_JOB_DIRECTORY", "finishedJobs/");
    /* This function, create_zip, was copied from davidwalsh.name/create-zip-php*/
    /* creates a compressed zip file */
    function create_zip($files = array(),$destination = '',$overwrite = false) {
@@ -51,6 +52,9 @@
    function jobZipNameFromMailAndJob($mail, $jobName) {
             return JOB_DIRECTORY.str_replace(array('.', '@'), '', $jobName)."For".str_replace(array('.', '@'), '', $mail).".zip";
    }
+   function finishedJobZipNameFromMailAndJob($mail, $jobName) {
+            return FINISHED_JOB_DIRECTORY.str_replace(array('.', '@'), '', $jobName)."For".str_replace(array('.', '@'), '', $mail).".zip";
+   }
    function writeUploadedDataFile($filename) {
             return move_uploaded_file($_FILES[$filename]["tmp_name"], $_FILES[$filename]["name"]);
             
@@ -61,4 +65,5 @@
             }
             return false;
    }
+
 ?>
