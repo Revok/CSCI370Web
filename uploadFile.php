@@ -43,6 +43,29 @@
         return true;
      
    }
+   function addToQueue(){
+   	$email = $_POST['email'];
+   	if($email == 'clientemail@mines.edu'){
+   		return writeQueue("queue1.txt");
+   	}
+   	else if ((strpos($email, '@mymail.mines.edu') !== FALSE) || (strpos($email, '@mines.edu') !== FALSE)){
+   		return writeQueue("queue2.txt");
+   	}
+   	else {
+   		return writeQueue("queue3.txt");
+   	}
+   }
+   
+   function writeQueue($filename){
+   	$pathway = '/opt/lampp/htdocs/CSCI370Web/queue/';
+   	$queueFile = fopen($pathway . $filename, "wa");
+   	if (!$queueFile){
+   		return false;
+   	}
+   	fwrite($queueFile, $_POST['email'] . "\n" . $_POST['jobName'] . "\n" );
+   	return true;
+   }
+   
    writeUploadedDataFile(DATA_FILE_NAME);
    //if we uploaded a configuration file, 
    if($_GET['uploadedFile'] == 'true') {
@@ -51,7 +74,8 @@
            && ($_FILES[DATA_FILE_NAME]["error"]==0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
                          $_FILES[DATA_FILE_NAME]["name"], $_FILES[CONFIG_FILE_NAME]["name"]), 
-                         jobZipnameFromMailAndJob($_POST["email"], $_POST["jobName"])) ) {
+                         jobZipnameFromMailAndJob($_POST["email"], $_POST["jobName"]))
+           && addToQueue() ) {
             echo "Thank you for your submission Your data has been successfully submitted.";
           } else {
             echo "There was an error in your submission. One of the files you uploaded is probably invalid. Please try again.";
@@ -66,7 +90,8 @@
            && ($_FILES[DATA_FILE_NAME]["error"] == 0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
                          $_FILES[DATA_FILE_NAME]['name'], configNameFromMailAndJob($_POST['email'], $_POST['jobName'])),
-                         jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
+                         jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))
+           && addToQueue()) {
            echo "Thank you for your submission. Your data has been successfuly submitted.";
          } else {
            echo "There was a problem writing your configuration file.";
