@@ -63,7 +63,7 @@
    	if (!$queueFile){
    		return false;
    	}
-   	fwrite($queueFile, $_POST['email'] . "\n" . $_POST['jobName'] . "\n" );
+   	fwrite($queueFile, finishedJobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']) . "\n");
    	return true;
    }
 
