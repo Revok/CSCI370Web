@@ -5,9 +5,9 @@
 
    define("DATA_FILE_NAME", "DataFile");
    define("CONFIG_FILE_NAME", "ConfigFile");   
-
+   define("FILE_ALREADY_EXISTS", "<b>".$_POST['email']." already has a job of the name: ".$_POST['jobName']." please go back and fill out the form again.</b><br/>");
    function verifyConfigFile($filename) {
-        $configFile = fopen($filename, "r");
+        return true;
    }
    function writeJobFile($email, $jobName) {
         $jobFile = fopen(jobNameFromMailAndJob($email, $jobName), "w");
@@ -66,20 +66,23 @@
    	fwrite($queueFile, $_POST['email'] . "\n" . $_POST['jobName'] . "\n" );
    	return true;
    }
-   
+
    writeUploadedDataFile(DATA_FILE_NAME);
+
    //if we uploaded a configuration file, 
    if($_GET['uploadedFile'] == 'true') {
-        echo writeUploadedDataFile(CONFIG_FILE_NAME);
-        if(writeJobFile($_POST['email'], $_POST['jobName'])
+        if(!file_exists(jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))
+           && writeJobFile($_POST['email'], $_POST['jobName'])
            && ($_FILES[DATA_FILE_NAME]["error"]==0)
            && create_zip(array(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']), 
                          $_FILES[DATA_FILE_NAME]["name"], $_FILES[CONFIG_FILE_NAME]["name"]), 
                          jobZipnameFromMailAndJob($_POST["email"], $_POST["jobName"]))
            && addToQueue() ) {
             echo "Thank you for your submission Your data has been successfully submitted.";
+          } else if(file_exists(jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
+            echo FILE_ALREADY_EXISTS;
           } else {
-            echo "There was an error in your submission. One of the files you uploaded is probably invalid. Please try again.";
+            echo "<b>There was an error in your submission. One of the files you uploaded is probably invalid. Please try again.</b>";
          }
    } else { //otherwise, build the configuration file
      if(!file_exists(jobZipNameFromMailAndJob($_POST['email'], $_POST['jobName']))) {
@@ -94,10 +97,10 @@
            && addToQueue()) {
            echo "Thank you for your submission. Your data has been successfuly submitted.";
          } else {
-           echo "There was a problem writing your configuration file.";
+           echo "<b>There was a problem in creating your model. Please make sure you gave correct inputs.</b><br/>";
          }
      } else {
-        echo "<b>".$_POST['email']." already has a job of the name: ".$_POST['jobName']." please go back and fill out the form again.</b><br/>";          
+        echo FILE_ALREADY_EXISTS;
      }
      unlink(jobNameFromMailAndJob($_POST['email'], $_POST['jobName']));
      unlink(configNameFromMailAndJob($_POST['email'], $_POST['jobName']));
